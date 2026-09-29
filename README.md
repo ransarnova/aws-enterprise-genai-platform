@@ -47,21 +47,15 @@ This repository does not require committed AWS credentials or
 application secrets. Deployment-specific configuration must be
 provided outside version control.
 
-See SECURITY.md (to be added).
-
-## License
-
-See LICENSE.
-
 ## Author and Maintainer
 
 Randhir Kumar
 
-## Project Showcase
+## Reference Architecture
 
-This reference implementation is also featured on the
-[RanSarNova Reference Architectures](https://www.ransarnova.com/reference-architectures)
-website.
+For the high-level architecture and engineering overview, visit:
+
+[RanSarNova — Reference Architectures](https://www.ransarnova.com/reference-architectures)
 
 ## License
 
