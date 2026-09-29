@@ -51,12 +51,6 @@ provided outside version control.
 
 Randhir Kumar
 
-## Reference Architecture
-
-For the high-level architecture and engineering overview, visit:
-
-[RanSarNova — Reference Architectures](https://www.ransarnova.com/reference-architectures)
-
 ## License
 
 Copyright 2026 Randhir Kumar.
