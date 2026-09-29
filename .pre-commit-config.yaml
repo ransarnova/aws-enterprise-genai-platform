@@ -7,6 +7,22 @@ repos:
         language: system
         pass_filenames: false
 
+      - id: ruff-check
+        name: Ruff - Python linting
+        entry: ruff check --config app/pyproject.toml
+        language: system
+        types: [python]
+        files: ^app/
+        pass_filenames: true
+
+      - id: ruff-format
+        name: Ruff - Python formatting
+        entry: ruff format --check --config app/pyproject.toml
+        language: system
+        types: [python]
+        files: ^app/
+        pass_filenames: true
+
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
