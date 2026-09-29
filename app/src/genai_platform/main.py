@@ -1,15 +1,25 @@
-"""Enterprise GenAI Platform API."""
+"""Enterprise GenAI Platform application entry point."""
 
 from fastapi import FastAPI
 
-app = FastAPI(
-    title="Enterprise GenAI Platform",
-    version="0.1.0",
-    description="Reusable enterprise GenAI platform reference implementation.",
-)
+from genai_platform.api.v1.router import api_router
+from genai_platform.core.config import get_settings
 
 
-@app.get("/health", tags=["Health"])
-def health() -> dict[str, str]:
-    """Return the application health status."""
-    return {"status": "healthy"}
+def create_app() -> FastAPI:
+    """Create and configure the FastAPI application."""
+
+    settings = get_settings()
+
+    application = FastAPI(
+        title=settings.app_name,
+        version="0.1.0",
+        description="Reusable enterprise GenAI platform reference implementation.",
+    )
+
+    application.include_router(api_router)
+
+    return application
+
+
+app = create_app()
