@@ -42,7 +42,22 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Scan repository
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install Gitleaks CLI
+        run: |
+          GITLEAKS_VERSION="8.30.1"
+
+          curl --fail --location --silent --show-error \
+            -o gitleaks.tar.gz \
+            "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz"
+
+          mkdir -p /tmp/gitleaks-bin
+          tar -xzf gitleaks.tar.gz -C /tmp/gitleaks-bin gitleaks
+
+          sudo install -m 0755 \
+            /tmp/gitleaks-bin/gitleaks \
+            /usr/local/bin/gitleaks
+
+          gitleaks version
+
+      - name: Scan complete Git history
+        run: gitleaks git --redact --verbose .
