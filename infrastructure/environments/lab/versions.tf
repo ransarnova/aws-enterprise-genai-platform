@@ -7,4 +7,12 @@ terraform {
       version = "~> 6.38"
     }
   }
+
+  backend "s3" {
+    bucket       = "enterprise-genai-platform-ran-tfstate"
+    key          = "enterprise-genai-platform/lab/terraform.tfstate"
+    region       = "ap-south-1"
+    encrypt      = true
+    use_lockfile = true
+  }
 }

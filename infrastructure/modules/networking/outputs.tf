@@ -27,3 +27,23 @@ output "availability_zones" {
   description = "Availability Zones used by the networking module."
   value       = var.availability_zones
 }
+
+output "public_route_table_id" {
+  description = "ID of the public route table."
+  value       = aws_route_table.public.id
+}
+
+output "private_route_table_ids" {
+  description = "IDs of the private route tables."
+  value       = aws_route_table.private[*].id
+}
+
+output "s3_gateway_endpoint_id" {
+  description = "ID of the S3 Gateway Endpoint."
+  value       = aws_vpc_endpoint.s3.id
+}
+
+output "dynamodb_gateway_endpoint_id" {
+  description = "ID of the DynamoDB Gateway Endpoint."
+  value       = aws_vpc_endpoint.dynamodb.id
+}
