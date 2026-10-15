@@ -37,3 +37,9 @@ variable "private_subnet_cidrs" {
     error_message = "Exactly two private subnet CIDRs must be provided."
   }
 }
+
+variable "enable_nat_gateway" {
+  description = "Whether to provision a Regional NAT Gateway and private default routes."
+  type        = bool
+  default     = false
+}

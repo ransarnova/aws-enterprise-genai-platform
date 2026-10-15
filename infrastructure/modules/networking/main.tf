@@ -108,3 +108,23 @@ resource "aws_vpc_endpoint" "dynamodb" {
     Name = "${var.name_prefix}-dynamodb-gateway-endpoint"
   }
 }
+
+resource "aws_nat_gateway" "regional" {
+  count = var.enable_nat_gateway ? 1 : 0
+
+  vpc_id            = aws_vpc.this.id
+  availability_mode = "regional"
+  connectivity_type = "public"
+
+  tags = {
+    Name = "${var.name_prefix}-regional-nat"
+  }
+}
+
+resource "aws_route" "private_internet" {
+  count = var.enable_nat_gateway ? length(aws_route_table.private) : 0
+
+  route_table_id         = aws_route_table.private[count.index].id
+  destination_cidr_block = "0.0.0.0/0"
+  nat_gateway_id         = aws_nat_gateway.regional[0].id
+}

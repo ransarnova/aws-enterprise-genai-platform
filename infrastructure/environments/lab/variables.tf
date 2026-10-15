@@ -46,3 +46,38 @@ variable "private_subnet_cidrs" {
     "10.0.11.0/24",
   ]
 }
+
+variable "enable_nat_gateway" {
+  description = "Enable Regional NAT Gateway for private subnet outbound connectivity."
+  type        = bool
+  default     = false
+}
+
+variable "enable_eks" {
+  description = "Whether to provision Amazon EKS infrastructure."
+  type        = bool
+  default     = false
+}
+
+variable "eks_kubernetes_version" {
+  description = "Kubernetes version for the EKS cluster."
+  type        = string
+  default     = "1.34"
+}
+
+variable "eks_admin_trusted_role_arn" {
+  description = "Existing IAM role trusted to assume the dedicated EKS administrator role."
+  type        = string
+}
+
+variable "eks_endpoint_public_access" {
+  description = "Enable restricted public Kubernetes API access for the lab."
+  type        = bool
+  default     = false
+}
+
+variable "eks_public_access_cidrs" {
+  description = "Allowlisted public IP CIDRs for Kubernetes API access."
+  type        = list(string)
+  default     = []
+}

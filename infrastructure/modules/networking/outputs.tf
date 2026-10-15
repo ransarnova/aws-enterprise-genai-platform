@@ -47,3 +47,8 @@ output "dynamodb_gateway_endpoint_id" {
   description = "ID of the DynamoDB Gateway Endpoint."
   value       = aws_vpc_endpoint.dynamodb.id
 }
+
+output "regional_nat_gateway_id" {
+  description = "ID of the Regional NAT Gateway, if enabled."
+  value       = try(aws_nat_gateway.regional[0].id, null)
+}
