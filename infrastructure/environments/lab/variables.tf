@@ -62,7 +62,7 @@ variable "enable_eks" {
 variable "eks_kubernetes_version" {
   description = "Kubernetes version for the EKS cluster."
   type        = string
-  default     = "1.34"
+  default     = "1.36"
 }
 
 variable "eks_admin_trusted_role_arn" {
@@ -80,4 +80,16 @@ variable "eks_public_access_cidrs" {
   description = "Allowlisted public IP CIDRs for Kubernetes API access."
   type        = list(string)
   default     = []
+}
+
+variable "enable_eks_node_group" {
+  description = "Whether to provision EKS worker nodes."
+  type        = bool
+  default     = false
+}
+
+variable "eks_console_viewer_role_arn" {
+  description = "IAM Identity Center role ARN for read-only EKS console access."
+  type        = string
+  default     = null
 }

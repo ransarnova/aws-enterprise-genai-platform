@@ -28,9 +28,10 @@ resource "aws_iam_role_policy_attachment" "cluster" {
 resource "aws_eks_cluster" "this" {
   count = var.enable_cluster ? 1 : 0
 
-  name     = var.cluster_name
-  role_arn = aws_iam_role.cluster.arn
-  version  = var.kubernetes_version
+  name                          = var.cluster_name
+  role_arn                      = aws_iam_role.cluster.arn
+  version                       = var.kubernetes_version
+  bootstrap_self_managed_addons = false
 
   vpc_config {
     subnet_ids = var.private_subnet_ids

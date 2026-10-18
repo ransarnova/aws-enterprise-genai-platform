@@ -40,3 +40,15 @@ variable "public_access_cidrs" {
   type        = list(string)
   default     = []
 }
+
+variable "enable_node_group" {
+  description = "Whether to create the EKS managed node group."
+  type        = bool
+  default     = false
+}
+
+variable "console_viewer_role_arn" {
+  description = "IAM role ARN allowed read-only Kubernetes resource visibility through the AWS Console."
+  type        = string
+  default     = null
+}
