@@ -54,3 +54,34 @@ aws-credentials
 *.bak
 *.tmp
 lab-backup/
+
+# Terraform local files
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+**/tfplan
+*.tfvars
+*.tfvars.json
+crash.log
+crash.*.log
+
+# Environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# OS
+.DS_Store
+
+.env.local
+
+frontend/AGENTS.md

@@ -1,0 +1,136 @@
+
+LENDING POLICY — SYNTHETIC REFERENCE DOCUMENT
+Version: 1.0
+Purpose: Enterprise GenAI Platform technical demonstration
+
+IMPORTANT:
+This document contains fictional lending rules created exclusively
+for software testing. It is not a real financial institution's policy.
+
+1. APPLICATION ELIGIBILITY
+
+Applicants must provide valid income information, current debt
+obligations, requested loan amount, and repayment history.
+
+A credit score may be provided as additional supporting information.
+
+2. DEBT-TO-INCOME RATIO
+
+Debt-to-income ratio (DTI) is calculated as:
+
+Monthly debt obligations / Monthly income × 100
+
+DTI below 35%:
+Eligible for standard underwriting review.
+
+DTI from 35% to 50%:
+Requires enhanced manual review.
+
+DTI above 50%:
+Requires escalation to a senior credit reviewer.
+
+3. MISSED PAYMENT RULES
+
+Zero missed payments:
+No additional review required based solely on payment history.
+
+One missed payment:
+Flag for additional repayment-history verification.
+
+Two or more missed payments:
+Enhanced manual review is mandatory.
+
+4. CREDIT SCORE
+
+Credit score of 750 or higher:
+Strong credit profile indicator.
+
+Credit score from 650 to 749:
+Standard credit assessment.
+
+Credit score below 650:
+Additional risk assessment required.
+
+A credit score alone must not determine approval or rejection.
+
+5. LOAN APPROVAL
+
+The AI assistant must not approve or reject loan applications.
+
+Final lending decisions require authorized human review.
+
+6. INSUFFICIENT INFORMATION
+
+If policy documentation does not provide sufficient information
+to answer a question, the assistant must state that the available
+policy information is insufficient.
+
+The assistant must not invent lending rules.
+
+LENDING POLICY — SYNTHETIC REFERENCE DOCUMENT
+Version: 1.0
+Purpose: Enterprise GenAI Platform technical demonstration
+
+IMPORTANT:
+This document contains fictional lending rules created exclusively
+for software testing. It is not a real financial institution's policy.
+
+1. APPLICATION ELIGIBILITY
+
+Applicants must provide valid income information, current debt
+obligations, requested loan amount, and repayment history.
+
+A credit score may be provided as additional supporting information.
+
+2. DEBT-TO-INCOME RATIO
+
+Debt-to-income ratio (DTI) is calculated as:
+
+Monthly debt obligations / Monthly income × 100
+
+DTI below 35%:
+Eligible for standard underwriting review.
+
+DTI from 35% to 50%:
+Requires enhanced manual review.
+
+DTI above 50%:
+Requires escalation to a senior credit reviewer.
+
+3. MISSED PAYMENT RULES
+
+Zero missed payments:
+No additional review required based solely on payment history.
+
+One missed payment:
+Flag for additional repayment-history verification.
+
+Two or more missed payments:
+Enhanced manual review is mandatory.
+
+4. CREDIT SCORE
+
+Credit score of 750 or higher:
+Strong credit profile indicator.
+
+Credit score from 650 to 749:
+Standard credit assessment.
+
+Credit score below 650:
+Additional risk assessment required.
+
+A credit score alone must not determine approval or rejection.
+
+5. LOAN APPROVAL
+
+The AI assistant must not approve or reject loan applications.
+
+Final lending decisions require authorized human review.
+
+6. INSUFFICIENT INFORMATION
+
+If policy documentation does not provide sufficient information
+to answer a question, the assistant must state that the available
+policy information is insufficient.
+
+The assistant must not invent lending rules.

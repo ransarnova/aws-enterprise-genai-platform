@@ -1,0 +1,21 @@
+
+clusterName: enterprise-genai-platform-lab-eks
+
+region: ap-south-1
+vpcId: vpc-075616e8c46f9f992
+
+replicaCount: 1
+
+serviceAccount:
+  create: true
+  name: aws-load-balancer-controller
+
+enableServiceMutatorWebhook: true
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi

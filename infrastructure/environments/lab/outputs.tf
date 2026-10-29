@@ -59,3 +59,40 @@ output "admin_host_instance_profile_name" {
   description = "IAM instance profile for the private administration host."
   value       = module.admin_host.instance_profile_name
 }
+
+
+output "ecr_repository_url" {
+  description = "Private ECR repository URL for the FastAPI application."
+  value       = module.ecr.repository_url
+}
+
+
+output "app_pod_identity_role_arn" {
+  description = "IAM role used by the FastAPI application through EKS Pod Identity."
+  value       = module.app_identity.role_arn
+}
+
+output "app_pod_identity_association_id" {
+  description = "EKS Pod Identity association for the FastAPI application."
+  value       = module.app_identity.association_id
+}
+
+output "knowledge_base_id" {
+  value = module.knowledge_base.knowledge_base_id
+}
+
+output "knowledge_base_data_source_id" {
+  value = module.knowledge_base.data_source_id
+}
+
+output "cognito_user_pool_id" {
+  value = module.cognito.user_pool_id
+}
+
+output "cognito_frontend_client_id" {
+  value = module.cognito.frontend_client_id
+}
+
+output "cognito_token_endpoint" {
+  value = module.cognito.token_endpoint
+}

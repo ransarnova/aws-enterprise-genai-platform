@@ -27,7 +27,8 @@ resource "aws_subnet" "public" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name = "${var.name_prefix}-public-${count.index + 1}"
+    Name                     = "${var.name_prefix}-public-${count.index + 1}"
+    "kubernetes.io/role/elb" = "1"
   }
 }
 
@@ -41,7 +42,8 @@ resource "aws_subnet" "private" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name = "${var.name_prefix}-private-${count.index + 1}"
+    Name                              = "${var.name_prefix}-private-${count.index + 1}"
+    "kubernetes.io/role/internal-elb" = "1"
   }
 }
 

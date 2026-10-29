@@ -93,3 +93,15 @@ variable "eks_console_viewer_role_arn" {
   type        = string
   default     = null
 }
+
+variable "internal_nlb_name" {
+  description = "Name of the internal NLB created by the AWS Load Balancer Controller."
+  type        = string
+  default     = null
+}
+
+variable "enable_api_gateway" {
+  description = "Create API Gateway after the internal NLB is available."
+  type        = bool
+  default     = false
+}
